@@ -3,6 +3,7 @@
   &__wrap {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background: #fff;
   }
 
   &__image {
@@ -65,5 +66,10 @@
         line-height: 16px;
       }
     }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: flex-end;
   }
 }
