@@ -1,5 +1,9 @@
 @import 'typo';
 
+
+$tablet: 1042px;
+$mobile: 768px;
+
 @import 'components/header';
 @import 'components/mobile-menu';
 @import 'components/footer';

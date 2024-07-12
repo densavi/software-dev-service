@@ -6,9 +6,23 @@
 
 body {
   font-family: "Inter", sans-serif;
+  background: #EEEEF7;
+  font-size: 18px;
+  line-height: 1.44;
+  color: #232649;
 }
 
 img {
   max-width: 100%;
   max-height: 100%;
+}
+
+.container {
+  max-width: 1192px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 24px;
+  @include mobile {
+    padding: 0 20px;
+  }
 }
