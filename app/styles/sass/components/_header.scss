@@ -22,6 +22,9 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+    @include tablet {
+      display: none;
+    }
     li {
       &:not(:last-child) {
         margin-right: 16px;
@@ -54,6 +57,12 @@
           }
         }
       }
+    }
+  }
+
+  .btn {
+    @include tablet {
+      margin-left: auto;
     }
   }
 }
