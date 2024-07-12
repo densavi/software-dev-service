@@ -1,8 +1,10 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 10;
+  transition: background .5s ease;
   .container {
     height: 76px;
     display: flex;
@@ -55,7 +57,8 @@
           visibility: hidden;
           transition: opacity .3s ease;
         }
-        &:hover {
+        &:hover,
+        &.active {
           color: #fff;
           &:before {
             opacity: 1;
@@ -75,5 +78,9 @@
       width: auto;
       height: 32px;
     }
+  }
+
+  &__bg {
+    background: #080B2B;
   }
 }
