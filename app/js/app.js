@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   $(".js-anchor").on("click", function (e) {
     e.preventDefault();
     $(".mobile-menu").removeClass("active");
-    $(".header__open-menu").removeClass("active");
+    $(".open-menu").removeClass("active");
     const targetId = $(this).attr("href");
     const targetOffset = $(targetId).offset().top - headerHeight;
 
