@@ -1,16 +1,93 @@
 .about-2 {
   background: #F7F7FF;
-  box-shadow: 0px 40px 80px 0px rgba(163,163,189,0.32);
-
+  box-shadow: 0px 40px 80px 0px rgba(163, 163, 189, 0.32);
   &__wrap {
     padding: 120px 0;
     display: grid;
     grid-template-columns: 376px 1fr;
     gap: 8px;
+    overflow: hidden;
+    @include tablet {
+      padding: 100px 0;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 40px;
+    }
+    @include mobile {
+      padding: 40px 0;
+      gap: 24px;
+    }
   }
 
   &__image {
     width: 100%;
     position: relative;
+    @include tablet {
+      width: 376px;
+    }
+    @include mobile {
+      max-width: 335px;
+      width: 100%;
+    }
+
+    img {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:before {
+      content: '';
+      background: url('../images/dist/experience-before.png') center center / contain;
+      width: 422px;
+      height: 240px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 60%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: 48px;
+    line-height: 54px;
+    font-weight: 400;
+    text-transform: capitalize;
+    @include mobile {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 6px 12px;
+    flex-wrap: wrap;
+
+    @include mobile {
+      gap: 4px 22px;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      color: #424269;
+      font-size: 24px;
+      line-height: 28px;
+      @include mobile {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      svg {
+        margin-right: 4px;
+      }
+      &:after {
+        content: '/';
+        padding-left: 5px;
+        color: #C7C9DD;
+      }
+    }
   }
 }

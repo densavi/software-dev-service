@@ -1,0 +1,60 @@
+.services {
+  padding: 120px 0;
+  color: #fff;
+  background: url('../images/dist/services-bg.png') center center / cover #080B2B;
+
+  @include tablet {
+    padding: 100px 0;
+  }
+
+  @include mobile {
+    padding: 40px 0;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 48px;
+    line-height: 54px;
+    font-weight: 400;
+    @include mobile {
+      margin-bottom: 24px;
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 8px;
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile {
+      gap: 24px 8px;
+    }
+  }
+
+  &__item {
+    img {
+      display: flex;
+      width: 100%;
+      margin-bottom: 16px;
+      height: 180px;
+      object-fit: cover;
+      @include mobile {
+        height: 78px;
+        margin-bottom: 8px;
+      }
+    }
+    span {
+      font-size: 24px;
+      line-height: 28px;
+      text-transform: capitalize;
+      @include mobile {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+}

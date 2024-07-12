@@ -1,0 +1,48 @@
+.about {
+  padding: 120px 0;
+  @include tablet {
+    padding: 100px 0 0;
+  }
+  @include mobile {
+    padding-top: 40px;
+  }
+  &__image {
+    display: flex;
+    img {
+      width: 100%;
+    }
+  }
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    align-items: center;
+    @include tablet {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: 48px;
+    line-height: 54px;
+    font-weight: 400;
+    @include mobile {
+      margin-bottom: 16px;
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 24px;
+    font-size: 15px;
+    line-height: 24px;
+    p {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
