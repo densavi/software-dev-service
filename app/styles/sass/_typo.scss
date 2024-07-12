@@ -62,4 +62,11 @@ img {
       background: rgba(#433FF9, .8);
     }
   }
+  &-transparent {
+    border-color: #424269;
+    transition: border-color .3s ease;
+    &:hover {
+      border-color: #fff;
+    }
+  }
 }
