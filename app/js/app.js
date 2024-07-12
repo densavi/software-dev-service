@@ -12,8 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   $(window).scroll(function () {
     if ($(this).scrollTop() >= 10) {
+      $(".js-top").addClass("active");
       $(".header").addClass("header__bg");
     } else {
+      $(".js-top").removeClass("active");
       $(".header").removeClass("header__bg");
     }
   });
@@ -59,4 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
     $(".js-anchor").removeClass("active");
     activeAnchor.addClass("active");
   }
+
+  $(".js-top").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+  });
 });
