@@ -3,11 +3,25 @@
   background: url('../images/dist/hero-bg.png') center bottom / cover;
   color: #fff;
 
+  @include tablet {
+    padding: 116px 0 100px;
+  }
+
+  @include mobile {
+    padding: 72px 0 40px;
+  }
+
   &__wrap {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
     align-items: center;
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+    @include mobile {
+      gap: 16px;
+    }
   }
 
   &__logo {
