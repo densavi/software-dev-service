@@ -9,6 +9,11 @@
     border-radius: 50%;
     background: transparent;
     border: 1px solid #424269;
+    @include mobile {
+      margin-left: 12px;
+      width: 32px;
+      height: 32px;
+    }
     span {
       position: absolute;
       left: 13px;
@@ -18,12 +23,23 @@
       border-radius: 2px;
       top: 16px;
       transition: all .3s ease;
+      @include mobile {
+        left: 8px;
+        top: 10px;
+        width: 15px;
+      }
       &:nth-child(2) {
         top: 20px;
+        @include mobile {
+          top: 15px;
+        }
       }
       &:nth-child(3) {
         top: 24px;
         width: 13px;
+        @include mobile {
+          top: 20px;
+        }
       }
     }
 
@@ -42,6 +58,9 @@
           top: 50%;
           width: 16px;
           transform: translate(-50%, -50%) rotate(-45deg);
+          @include mobile {
+            width: 15px;
+          }
         }
       }
     }

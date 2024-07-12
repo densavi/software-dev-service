@@ -9,10 +9,16 @@
     align-items: center;
     justify-content: space-between;
     position: relative;
+    @include mobile {
+      height: 48px;
+    }
   }
 
   &__logo {
     display: flex;
+    @include mobile {
+      max-width: 76px;
+    }
   }
 
   &__menu {
@@ -63,6 +69,11 @@
   .btn {
     @include tablet {
       margin-left: auto;
+    }
+    @include mobile {
+      display: inline-flex;
+      width: auto;
+      height: 32px;
     }
   }
 }
