@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   $(".js-menu").on("click", function (e) {
     e.preventDefault();
     $(this).toggleClass("active");
+		$('.mobile-menu').toggleClass('active');
   });
 
   $(window).scroll(function () {
