@@ -43,6 +43,7 @@ img {
   font-weight: 600;
   border: 1px solid;
   transition: all .3s ease;
+  text-transform: capitalize;
   @media (max-width: 420px) {
     width: 100%;
     display: flex;
@@ -72,6 +73,7 @@ img {
   &-white {
     background: #fff;
     color: #433FF9;
+    border-color: #fff;
     &:hover {
       background: rgba(#fff,.8);
     }
