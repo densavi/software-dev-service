@@ -1,0 +1,26 @@
+.hero {
+  padding: 132px 0 120px;
+  background: url('../images/dist/hero-bg.png') center bottom / cover;
+  color: #fff;
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+  }
+
+  &__content {
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__btn {
+    margin-top: 24px;
+  }
+}

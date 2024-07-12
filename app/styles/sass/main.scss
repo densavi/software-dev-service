@@ -1,8 +1,27 @@
-@import 'typo';
-
-
 $tablet: 1042px;
-$mobile: 768px;
+$mobile: 768px; 
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+@import 'typo';
 
 @import 'components/header';
 @import 'components/mobile-menu';
